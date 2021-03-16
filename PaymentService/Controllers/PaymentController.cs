@@ -34,9 +34,9 @@ namespace PaymentService.Controllers
 
         [HttpPost]
         [Route("delay")]
-        public IActionResult SetDelay([FromBody] int delay)
+        public IActionResult SetDelay([FromBody] DelayRequestModel request)
         {
-            _delay = delay;
+            _delay = request.Delay;
             return NoContent();
         }
 
